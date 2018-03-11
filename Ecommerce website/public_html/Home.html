@@ -10,8 +10,32 @@ and open the template in the editor.
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="styles.css">
+        <script src="Script.js"></script>
     </head>
     <body>
+        <div class="slideshow-container">
+            <div class="mySlides fade">
+                <img class="img" src="Resources/img.jpg" alt="slide1">
+            </div>
+
+            <div class="mySlides fade">
+                <img class="img" src="Resources/img2.jpg" alt="slide2">
+            </div>
+
+            <div class="mySlides fade">
+                <img class="img" src="Resources/img3.jpg" alt="slide3" >
+            </div>
+        </div>
+        <br>
+        <!-- The dots/circles -->
+        <div style="text-align:center;">
+            <span class="dot" onclick="currentSlide(1)"></span> 
+            <span class="dot" onclick="currentSlide(2)"></span> 
+            <span class="dot" onclick="currentSlide(3)"></span> 
+        </div>
+        <br>
+
+
         <div class="topnav">
             <a class="active" href="home.html">Home</a>
             <a href="GeneralInfo.html">General Info</a>
@@ -20,10 +44,10 @@ and open the template in the editor.
             <a href="Register.html">Register</a>
             <a href="ContactUS.html">Contact Us</a>
         </div>
-        <div class="row" style="background: #f0f0f0;">
+        <div class="row">
             <div class="column side"></div>
-            <div class="column middle">
-                <div class="card body">
+            <div class="column middle" >
+                <div class="card body_content" style="height: 100vh">
                     <h1>Welcome</h1>
                     <p>
                         The purpose of this site is to  raise awareness of people diagnosed with Asperger’s disorder.
@@ -32,7 +56,7 @@ and open the template in the editor.
                 </div>
             </div>
             <div class="column side">
-                <div class="card body">
+                <div class="card body_content">
                     <form action="action_page.php">
                         <div class="container">
                             <h1>Sign Up</h1>
@@ -64,12 +88,12 @@ and open the template in the editor.
             </div>
         </div>
         <div class="footer" >
-            <a class="active" href="home.html">Home</a>
-            <a href="GeneralInfo.html">General Info</a>
-            <a href="Support.html">Support</a>
-            <a href="AboutUs.html">About Us</a>
-            <a href="Register.html">Register</a>
-            <a href="ContactUS.html">Contact Us</a>
+            <a class="footer_font" href="home.html">Home</a>
+            <a class="footer_font" href="GeneralInfo.html">General Info</a>
+            <a class="footer_font" href="Support.html">Support</a>
+            <a class="footer_font" href="AboutUs.html">About Us</a>
+            <a class="footer_font" href="Register.html">Register</a>
+            <a class="footer_font" href="ContactUS.html">Contact Us</a>
         </div>
     </body>
 </html>
