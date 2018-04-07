@@ -29,38 +29,6 @@ p{
 
 /*layout*/
 
-/* Sidebar menu */
-.sidenav {
-    font-family: arial;
-    height: 100%; 
-    width: 15%; 
-    position: fixed; 
-    z-index: 1; 
-    top: 0; 
-    left: 0;
-    background-color: #111; 
-    overflow-x: hidden;
-    padding-top: 20px;
-}
-
-.sidenav a {
-    padding: 6px 8px 6px 16px;
-    text-decoration: none;
-    font-size: 25px;
-    color: #f0f0f0;
-    display: block;
-}
-
-.sidenav a:hover {
-    color: #f1f1f1;
-}
-
-
-.main {
-    margin-left: 160px;
-    padding: 0px 10px;
-}
-
 @media screen and (max-height: 450px) {
     .sidenav {padding-top: 15px;}
     .sidenav a {font-size: 18px;}
@@ -78,6 +46,16 @@ p{
 
 .column {
     float: left;
+    width: 50%;
+    margin-top: 6px;
+    padding: 20px;
+}
+
+@media screen and (max-width: 600px) {
+    .column, input[type=submit] {
+        width: 100%;
+        margin-top: 0;
+    }
 }
 
 .column.side {
@@ -88,9 +66,6 @@ p{
     width: 50%;
 }
 
-.column.column1 {
-    flex: 100%;
-}
 .column.column2 {
     flex: 50%;
 }
@@ -126,6 +101,39 @@ p{
 /*layout end*/
 
 /*componets*/
+
+/* Sidebar menu */
+.sidenav {
+    font-family: arial;
+    height: 100%; 
+    width: 15%; 
+    position: fixed; 
+    z-index: 1; 
+    top: 0; 
+    left: 0;
+    background-color: #111; 
+    overflow-x: hidden;
+    padding-top: 20px;
+}
+
+.sidenav a {
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #f0f0f0;
+    display: block;
+}
+
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+
+
+.main {
+    margin-left: 160px;
+    padding: 0px 10px;
+}
+
 .card {
     background-color: white;
     padding: 20px;
@@ -152,6 +160,33 @@ input[type=text]:focus, input[type=password]:focus {
     background-color: #ddd;
     outline: none;
 }
+
+input[type=text], select, textarea {
+    width: 100%; /* Full width */
+    padding: 12px; /* Some padding */  
+    border: 1px solid #ccc; /* Gray border */
+    border-radius: 4px; /* Rounded borders */
+    box-sizing: border-box; /* Make sure that padding and width stays in place */
+    margin-top: 6px; /* Add a top margin */
+    margin-bottom: 16px; /* Bottom margin */
+    resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
+}
+
+/* Style the submit button with a specific background color etc */
+input[type=submit] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* When moving the mouse over the submit button, add a darker green color */
+input[type=submit]:hover {
+    background-color: #45a049;
+}
+
 
 hr {
     border: 1px solid #f1f1f1;
@@ -186,45 +221,12 @@ button:hover {
     width: 50%;
 }
 
-/* Add padding to container elements */
-.container {
-    padding: 16px;
-}
-
 /* Clear floats */
 .clearfix::after {
     content: "";
     clear: both;
     display: table;
 }
-
-
-input[type=text], select, textarea {
-    width: 100%; /* Full width */
-    padding: 12px; /* Some padding */  
-    border: 1px solid #ccc; /* Gray border */
-    border-radius: 4px; /* Rounded borders */
-    box-sizing: border-box; /* Make sure that padding and width stays in place */
-    margin-top: 6px; /* Add a top margin */
-    margin-bottom: 16px; /* Bottom margin */
-    resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
-}
-
-/* Style the submit button with a specific background color etc */
-input[type=submit] {
-    background-color: #4CAF50;
-    color: white;
-    padding: 12px 20px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-}
-
-/* When moving the mouse over the submit button, add a darker green color */
-input[type=submit]:hover {
-    background-color: #45a049;
-}
-
 
 .slideshow-container .img{
     padding-left: 15%;
@@ -296,7 +298,7 @@ input[type=submit]:hover {
 
 
 .close {
- 
+
     position: absolute;
     right: 25px;
     top: 0; 

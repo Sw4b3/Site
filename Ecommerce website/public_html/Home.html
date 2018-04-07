@@ -11,44 +11,34 @@ and open the template in the editor.
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="styles.css">
         <script src="Script.js"></script>
-        <script>
-// Get the modal
-            var modal = document.getElementById('id01');
-
-// When the user clicks anywhere outside of the modal, close it
-            window.onclick = function (event) {
-                if (event.target == modal) {
-                    modal.style.display = "none";
-                }
-            }
-        </script>
     </head>
     <body>
+        <div>
+            <div class="slideshow-container">
+                <div class="mySlides fade">
+                    <img class="img" src="Resources/img.jpg" alt="slide1">
+                </div>
 
-        <div class="slideshow-container">
-            <div class="mySlides fade">
-                <img class="img" src="Resources/img.jpg" alt="slide1">
-            </div>
+                <div class="mySlides fade">
+                    <img class="img" src="Resources/img2.jpg" alt="slide2">
+                </div>
 
-            <div class="mySlides fade">
-                <img class="img" src="Resources/img2.jpg" alt="slide2">
+                <div class="mySlides fade">
+                    <img class="img" src="Resources/img3.jpg" alt="slide3" >
+                </div>
             </div>
-
-            <div class="mySlides fade">
-                <img class="img" src="Resources/img3.jpg" alt="slide3" >
+            <br>
+            <!-- The dots/circles -->
+            <div style="text-align:center;">
+                <span class="dot" onclick="currentSlide(1)"></span> 
+                <span class="dot" onclick="currentSlide(2)"></span> 
+                <span class="dot" onclick="currentSlide(3)"></span> 
             </div>
+            <br>
         </div>
-        <br>
-        <!-- The dots/circles -->
-        <div style="text-align:center;">
-            <span class="dot" onclick="currentSlide(1)"></span> 
-            <span class="dot" onclick="currentSlide(2)"></span> 
-            <span class="dot" onclick="currentSlide(3)"></span> 
-        </div>
-        <br>
 
         <div class="sidenav">
-            <center><img class="img" src="Resources/logo.png" alt="slide3" style="align-self: center" ></center>
+            <center><img class="img" src="Resources/Logo.png" alt="slide3" style="align-self: center" ></center>
             <a class="active" href="home.html">Home</a>
             <a href="GeneralInfo.html">General Info</a>
             <a href="Support.html">Support</a>
@@ -61,17 +51,15 @@ and open the template in the editor.
         <div class="main">
             ...
         </div>
-
         <div class="row">
             <div class="column side"></div>
             <div class="column middle" >
                 <!-- The Modal -->
                 <div id="regist" class="modal">
-
                     <!-- Modal Content -->
-                    <div class="card body_content">
+                    <div class="card body_content" style="width: 50%; margin: auto; ">
                         <form action="action_page.php">
-                            <div class="container">
+                         
                                 <h1>Sign Up</h1>
                                 <p>Please fill in this form to create an account.</p>
                                 <hr>
@@ -95,7 +83,6 @@ and open the template in the editor.
                                     <button type="submit" class="signupbtn">Sign Up</button>
                                     <button  type="button" class="cancelbtn" onclick="document.getElementById('regist').style.display = 'none'" 
                                              >Cancel</button>
-                                </div>
                             </div>
                         </form>
                     </div>
@@ -112,17 +99,17 @@ and open the template in the editor.
             </div>
             <div class="column side">
                 <div class="card body_content">
-                      
-                        <form action="action_page.php">
-                            <h3>Contact Us</h3>
-                            <label for="fname">First Name</label>
-                            <input type="text" id="fname" name="firstname" placeholder="Name...">
-                            <label for="lname">Last Name</label>
-                            <input type="text" id="lname" name="lastname" placeholder="Last Name...">
-                            <label for="subject">Subject</label>
-                            <textarea id="subject" name="subject" placeholder="Write your message..." style="height:200px"></textarea>
-                            <input type="submit" value="Submit">
-                        </form>
+
+                    <form action="action_page.php">
+                        <h3>Contact Us</h3>
+                        <label for="fname">First Name</label>
+                        <input type="text" id="fname" name="firstname" placeholder="Name...">
+                        <label for="lname">Last Name</label>
+                        <input type="text" id="lname" name="lastname" placeholder="Last Name...">
+                        <label for="subject">Subject</label>
+                        <textarea id="subject" name="subject" placeholder="Write your message..." style="height:200px; font-family: arial"></textarea>
+                        <input type="submit" value="Submit">
+                    </form>
                 </div>
             </div>
         </div>
