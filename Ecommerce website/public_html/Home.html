@@ -58,7 +58,7 @@ and open the template in the editor.
                 <div id="regist" class="modal">
                     <!-- Modal Content -->
                     <div class="card body_content" style="width: 50%; margin: auto; ">
-                        <form action="action_page.php">
+                       <form action="action_page.php">
                         <div class="container">
                             <h1>Sign Up</h1>
                             <p>Please fill in this form to create an account.</p>
@@ -75,8 +75,8 @@ and open the template in the editor.
 
                             <label for="gender"><b>Gender</b></label>
                             <br>
-                            <input type="radio" name="gender" required>   <label for="gender">Male</label>
-                            <input type="radio" name="gender" required>  <label for="gender">Female</label>
+                            <input type="radio" name="gender" required style="margin-top:3%">   <label for="gender">Male</label>
+                            <input type="radio" name="gender" required style="margin-bottom: 3%">  <label for="gender">Female</label>
                             <br>
 
                             <label for="email"><b>Email</b></label>
@@ -96,7 +96,7 @@ and open the template in the editor.
 
                             <div class="clearfix">
                                 <button type="submit" onclick="validation()" class="signupbtn" >Sign Up</button>
-                                <button type="reset" class="cancelbtn">Cancel</button>
+                                <button  type="reset"  class="cancelbtn" onclick="closeModal()">Cancel</button>
                             </div>
                         </div>
                     </form>
@@ -106,7 +106,7 @@ and open the template in the editor.
 
                 <div class="card body_content" style="height: 100vh">
                     <h1>Welcome</h1>
-                    <p>
+                    <p class="content">
                         The purpose of this site is to  raise awareness of people diagnosed with Asperger’s disorder.
                         The aim is to people with this disorder to get support and as well as educate the general public.
                     </p>
@@ -128,7 +128,7 @@ and open the template in the editor.
                 </div>
                 <div class="card body_content">
                         <h3>Register Here</h3>
-                        <center><input  type="submit" id="normalbutton" onclick="document.getElementById('regist').style.display = 'block'" value="Register Here"></center>
+                        <center><input  type="submit" id="normalbutton" onclick="getModal()" value="Register Here"></center>
                 </div>
             </div>
         </div>

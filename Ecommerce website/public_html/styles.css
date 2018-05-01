@@ -147,6 +147,20 @@ p{
     border:1px solid #ccc
 }
 
+.content{
+    text-align: justify;
+    font-family: arial;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+.content-list{
+    text-align: justify;
+    font-family: arial;
+    padding-left: 15%;
+    padding-right: 5%;
+}
+
 * {box-sizing: border-box}
 
 /* Full-width input fields */

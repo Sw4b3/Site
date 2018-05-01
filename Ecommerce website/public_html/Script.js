@@ -58,23 +58,12 @@ function validatePasswordMatch(psw) {
     }
 }
 
-
 window.onload = function () {
     showSlides(1);
 };
 
 var slideIndex = 1;
 showSlides(slideIndex);
-
-// Next/previous controls
-function plusSlides(n) {
-    showSlides(slideIndex += n);
-}
-
-// Thumbnail image controls
-function currentSlide(n) {
-    showSlides(slideIndex = n);
-}
 
 function showSlides(n) {
     var i;
@@ -110,17 +99,16 @@ function showSlides() {
         slideIndex = 1;
     }
     slides[slideIndex - 1].style.display = "block";
-    setTimeout(showSlides, 5000); // Change image every 5 seconds
+    setTimeout(showSlides, 5000);
 }
 
-// Get the modal
-var modal = document.getElementById('id01');
+function getModal(){
+    document.getElementById('regist').style.display = 'block';
+}
 
+function closeModal(){
+    document.getElementById('regist').style.display = "none";
+}
 
-window.onclick = function (event) {
-    if (event.target === modal) {
-        modal.style.display = "none";
-    }
-};
 
  
