@@ -3,6 +3,61 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
+function validation() {
+    return validateFname();
+}
+
+function validateFname() {
+    var name = document.getElementById("fname").value;
+    if (name.length != 0 && /[a-zA-Z]/.test(name)) {
+        return validateLname();
+    } else {
+        prompt("Invalid First Name");
+    }
+}
+
+function validateLname() {
+    var name = document.getElementById("lname").value;
+    if (name.length != 0 && /[a-zA-Z]/.test(name)) {
+        return validateDOB()();
+    } else {
+        prompt("Invalid Last Name");
+    }
+}
+
+function validateDOB() {
+    var dob = document.getElementById("dob").value;
+    if (dob.length != 0 && /^([0-9]{2})\/([0-9]{2})\/([0-9]{4})$/.test(dob)) {
+        return validateEmail();
+    } else {
+        prompt("Invalid Date of Birth");
+    }
+}
+
+function validateEmail() {
+    var email = document.getElementById("email").value;
+    if (email.length != 0 && /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email)) {
+        return validatePassword();
+    } else {
+        prompt("Invalid Email");
+    }
+}
+function validatePassword() {
+    var psw = document.getElementById("psw").value;
+    if (psw.length >= 5) {
+        return validatePasswordMatch(psw);
+    } else {
+        prompt("Invalid Password");
+    }
+}
+function validatePasswordMatch(psw) {
+    var pswr = document.getElementById("pswr").value;
+    if (pswr==psw) {
+    } else {
+        prompt("Password Don't Match");
+    }
+}
+
 
 window.onload = function () {
     showSlides(1);
@@ -59,11 +114,13 @@ function showSlides() {
 }
 
 // Get the modal
-            var modal = document.getElementById('id01');
+var modal = document.getElementById('id01');
 
 
-            window.onclick = function (event) {
-                if (event.target == modal) {
-                    modal.style.display = "none";
-                }
-            }
+window.onclick = function (event) {
+    if (event.target === modal) {
+        modal.style.display = "none";
+    }
+};
+
+ 
